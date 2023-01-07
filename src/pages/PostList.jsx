@@ -6,7 +6,7 @@ const dateFormat = (str) => {
   return date.toLocaleDateString() + " " + date.toLocaleTimeString();
 };
 
-const PostList = ({postlist}) => {
+const PostList = ({ postlist }) => {
   return (
     <div className="flex flex-wrap justify-center">
       {postlist &&
@@ -20,7 +20,8 @@ const PostList = ({postlist}) => {
               <img src={item.owner.picture} className="h-16 rounded-full" />
               <div>
                 <div className="text-lg font-semibold tracking-wide text-orange-600">
-                <span className="capitalize">{item.owner.title}</span>. {item.owner.firstName} {item.owner.lastName}
+                  <span className="capitalize">{item.owner.title}</span>.{" "}
+                  {item.owner.firstName} {item.owner.lastName}
                 </div>
                 <div className="text-gray-500 text-sm">
                   {dateFormat(item.publishDate)}
@@ -32,9 +33,16 @@ const PostList = ({postlist}) => {
               <div className="flex flex-col justify-between">
                 <div>
                   <div className="font-semibold">{item.text}</div>
-                  <div className="flex flex-wrap text-xs text-orange-600">{item.tags.map((i)=>(
-                    <div key={i} className="px-2 py-0.5 m-0.5 rounded-full border border-orange-200 bg-orange-50">{i}</div>
-                  ))}</div>
+                  <div className="flex flex-wrap text-xs text-orange-600">
+                    {item.tags.map((i) => (
+                      <div
+                        key={i}
+                        className="px-2 py-0.5 m-0.5 rounded-full border border-orange-200 bg-orange-50"
+                      >
+                        {i}
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="text-xs text-gray-500">
                   <span className="text-orange-600 font-semibold text-lg">

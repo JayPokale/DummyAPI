@@ -1,7 +1,7 @@
 import React from "react";
 import PostList from "./PostList";
 
-const Home = ({postlist}) => {
+const Home = ({ postlist }) => {
   return (
     <>
       <div className="flex flex-col-reverse sm:flex-row mx-4 my-8 mb-24">
@@ -16,12 +16,12 @@ const Home = ({postlist}) => {
           </p>
         </div>
         <div className="w-full md:w-1/2 p-2">
-          <img src={'./Blogging.gif'} />
+          <img src={"./Blogging.gif"} />
         </div>
       </div>
       <div>
         <h1 className="mx-auto my-4 w-fit text-2xl font-semibold">Posts</h1>
-        <PostList postlist={postlist}/>
+        <PostList postlist={postlist} />
       </div>
     </>
   );

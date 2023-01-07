@@ -8,7 +8,7 @@ const Temp = () => {
     const imageURL = imagesArray.map((file) => {
       return URL.createObjectURL(file);
     });
-    setSelectedImages([...selectedImages , ...imageURL]);
+    setSelectedImages([...selectedImages, ...imageURL]);
   };
   return (
     <div style={{ marginTop: "50px" }}>
@@ -18,7 +18,15 @@ const Temp = () => {
           return (
             <div key={image}>
               <img src={image} width={200} />
-              <button onClick={()=>{setSelectedImages(selectedImages.filter(img => img !== image))}}>Remove</button>
+              <button
+                onClick={() => {
+                  setSelectedImages(
+                    selectedImages.filter((img) => img !== image)
+                  );
+                }}
+              >
+                Remove
+              </button>
             </div>
           );
         })}

@@ -11,8 +11,8 @@ const Post = ({ postlist }) => {
   const data = postlist?.filter((e) => e.id === id);
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  }, [data])
+    window.scrollTo(0, 0);
+  }, [data]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 mt-16 pb-4">

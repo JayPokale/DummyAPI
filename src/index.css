@@ -7,10 +7,12 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
 ::-webkit-scrollbar {
   width: 16px;
   height: 16px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #f97316;
   background-clip: padding-box;
